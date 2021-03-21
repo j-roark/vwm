@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'vietnamwarmilitaria/style.css' %}">
+        <title>Vietnam War Militaria</title>
+        <link rel="icon" href="{% static 'images/logo.png' %}">
+    </head>
+    <body>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <!-- navbar section -->
+        <nav class="navbar navbar-expand-lg vwm-navbar bg-light">
+            <img src="{% static 'images/logo.png' %}" class="navbar-img" width="auto" height="50">
+            <a class="vwm-navbar-title" href="#">Vietnam War Militaria</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <button onclick="location.href='/'" type="button" class="vwm-button btn-lg btn-outline-dark">home</button>
+                    </li>
+                    <div class="dropdown">
+                        <button class="btn-lg btn-outline-dark vwm-button dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        catalog
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            {% for cat in categories %}
+                            <a class="dropdown-item vwm-button" href="/Category/{{cat}}">{{cat}}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <button type="button" class="vwm-button btn-lg btn-outline-dark">library</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="vwm-button btn-lg btn-outline-dark">links</button>
+                    </li>
+                    <li class="nav-item navbar-right">
+                        <button type="button" class="vwm-button btn-lg btn-outline-dark">contact</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- body -->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xl-7 vwm-column mx-auto">
+                    <hr>
+                    <h2>Specializing in Vietnam War Militaria</h2>
+                    <hr>
+                    <h4>Patches, uniforms, plaques, knives, etc., with an emphasis on U.S. Special Forces/SOG items</h4>
+                    <hr>
+                    <h5>Welcome to Vietnam War Militaria</h5>
+                    <h6>
+                        This site provides rare, original militaria for collectors. I have over 25 years of experience collecting Vietnam era militaria and military fighting knives from WW2 to present day. My emphasis over the last five years has been United States Special Forces insignia (including SOG) from the Vietnam War.
+                    </h6>
+                    <br>
+                    <h6 class="body-emphasis"><i>
+                        Visit the Catalog to see a complete list of items that are currently available for sale. I can help you find rare, original militaria for your collection.
+                        </i>
+                    </h6>
+                    <br>
+                    <h6>
+                        As a collector, I am committed to provide high quality, rare, original items. This site is for people who are tired of buying patches or other militaria on Ebay or at gun shows that later turn out to be fakes. Visit my fakes page to help you to identify reproductions. Here’s my promise:
+                    </h6>
+                    <br>
+                    <h6 class="body-emphasis"><i>
+                        I guarantee all of my items are original. Not just made in Vietnam, but made in Vietnam (or in some cases Thailand/Okinawa/Laos/Cambodia as designated) during the Vietnam War!
+                        </i>
+                    </h6>
+                    <br>
+                    <h6>
+                        In addition to militaria, I also collect knives by Gerber, Terzuola, Randall, Loveless and BenchMark. Please note that I am not a dealer, just a collector, so my day job must take priority over the website. That said, I will do my best to promptly answer any inquiries or questions about the items I have for sale.
+                    </h6>
+                    <br>
+                    <h6 class="body-emphasis"><i>
+                        When you’re ready to order, I accept payment by Paypal, cashier’s check, postal money orders and Western Union. Before you order, email me to confirm availability prior to sending payment.
+                        </i>
+                    </h6>
+                    <br>
+                    <h6>
+                        Finally, I am always interested in trades or purchasing quality military items. Visit my Wanted page for items that I am currently looking to purchase or trade.
+                    </h6>
+                    <h6>
+                        For more information, email <b>info@vietnamwarmilitaria.com</b> or write to: <br> <i>Vietnam War Militaria, 2721 Brambleton Ave SW, Roanoke, Virginia 24015.</i> <br>Thank you!
+                    </h6>
+                    <hr>
+                    <br>
+                </div>
+                <!-- recent additions -->
+                <div class="col-xl-4 vwm-column mx-auto">
+                    <hr>
+                    <h2>Recent Additions</h2>
+                    <hr>
+                    {% for item in recent_additions %}
+                    <div class="vwm-card">
+                        <div class="row">
+                            <div class="container">
+                                <!-- image and description -->
+                                <img class="myImg" src="{{MEDIA_URL}}{{item.image}}" alt="{{item.name}}" align="left" style="width:100%;max-width:150px">
+                                <div class="vwm-text">
+                                    <h6>
+                                        <b>Description: </b>{{item.description}}
+                                    </h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="container">
+                                <p class="vwm-meta">Price: <em>${{item.price}}</em></p>
+                                <p class="vwm-meta">Category: <em>{{item.category}}</em></p>
+                                <a class="vwm-meta" href="mailto:info@vietnamwarmilitaria.com?subject=USARV security guard.">More info and availability</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <img class="modal-content" id="img01">
+                    <div id="caption"></div>
+                </div>
+                <br>
+            </div>
+        </div>
+        <!-- footer -->
+        <nav class="navbar navbar-expand-lg vwm-footer">
+            <a class="vwm-footer-title" href="#">© Copyright 2020 Vietnam War Militaria. All Rights Reserved</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item">
+                        <button type="button" class="vwm-button-inverse btn-lg  btn-outline-light">home</button>
+                    </li>
+                    <div class="dropup">
+                        <button class="btn-lg btn-outline-light vwm-button-inverse dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        catalog
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Special Forces</a>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <button type="button" class="vwm-button-inverse btn-lg btn-outline-light">library</button>
+                    </li>
+                    <li class="nav-item">
+                        <button type="button" class="vwm-button-inverse btn-lg btn-outline-light">links</button>
+                    </li>
+                    <li class="nav-item navbar-right">
+                        <button type="button" class="vwm-button-inverse btn-lg  btn-outline-light">contact</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <script>
+            var modal = document.getElementById("myModal");
+            var i;
+            var img = document.getElementsByClassName("myImg");
+            var modalImg = document.getElementById("img01");
+            for(i=0; i < img.length; i++)
+               {
+                img[i].onclick = function(){
+                modal.style.display = "block";
+                modalImg.src = this.src;
+             }
+            }
+            var span = document.getElementsByClassName("close")[0];
+            span.onclick = function() {
+               modal.style.display = "none";
+            }
+        </script>
+    </body>
+</html>
